@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>automate</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+     <h1>automated system</h1>
+     <br>
+
+     <section>
+         <p>Note: the programme will start in 5 seconds of automating the engine! keep your mouse cursor on the target to accomplish that</p>
+         <br>
+         <p>Warning: Default text limit is set to x-1000</p>
+
+     </section>
+
+
+     <section id="1">
+         <div class="2">
+             <form method="post">
+                 {% csrf_token %}
+                 <label>txt/msg/any</label>
+                 <input type="text" name="msg" class="msg-class">
+
+                 <button type="submit" class="submit-class">Automate Now</button>
+
+                 <label>Status</label>
+                 <input type="text" value="{{warning}}" class="r-class">
+             </form>
+         </div>
+     </section>
+
+</body>
+</html>
